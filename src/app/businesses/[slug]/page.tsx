@@ -56,7 +56,7 @@ async function ListingDetail({ params }: { params: Promise<{ slug: string }> }) 
             <MapPin aria-hidden="true" strokeWidth={1.75} />
             {l.location}
           </p>
-          <ListingCover assetId={l.coverAssetId} uid={`detail-${l.id}`} className={styles.cover} />
+          <ListingCover assetId={l.coverAssetId} eager sizes="(min-width: 1440px) 1280px, 100vw" className={styles.cover} />
           <section aria-labelledby="overview-title" className={styles.block}>
             <Eyebrow>Overview</Eyebrow>
             <h2 id="overview-title" className="visually-hidden">

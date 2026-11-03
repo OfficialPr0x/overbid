@@ -27,7 +27,12 @@ for (const [w, h] of viewports) {
   });
   const page = await context.newPage();
   for (const p of paths) {
-    await page.goto(base + p, { waitUntil: 'networkidle' });
+    await page.goto(base + p, { waitUntil: 'load', timeout: 90_000 });
+    await page.waitForTimeout(1500); // let hydration finish before touching attributes
+    await page.evaluate(async () => {
+      for (const img of document.images) img.loading = 'eager';
+      await Promise.all([...document.images].map((img) => img.decode().catch(() => {})));
+    });
     await page.evaluate(() => document.fonts.ready);
     const slug = p === '/' ? 'home' : p.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
@@ -39,7 +44,8 @@ for (const [w, h] of viewports) {
           const el = document.getElementById(sid);
           if (!el) return;
           document.documentElement.style.scrollBehavior = 'auto';
-          window.scrollTo(0, sid === 'home' ? 0 : el.getBoundingClientRect().top + window.scrollY);
+          if (sid === 'home') window.scrollTo(0, 0);
+          else el.scrollIntoView({ block: 'start' }); // honours scroll-margin-top, like anchor links
         }, id);
         await page.waitForTimeout(250);
         await page.screenshot({ path: `${out}/section-${id}-${w}x${h}.png` });

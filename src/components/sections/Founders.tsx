@@ -77,7 +77,7 @@ export function Founders() {
         <div className={styles.grid}>
           <div className={styles.copy}>
             <SectionHeading id="founders-title" plain={founders.headline.plain} accent={founders.headline.accent} description={founders.description} />
-            <div className={styles.actions}>
+            <div className={`${styles.actions} cta-row`}>
               <ButtonLink href={founders.primary.href} arrow>
                 {founders.primary.label}
               </ButtonLink>

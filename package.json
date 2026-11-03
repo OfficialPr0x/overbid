@@ -6,11 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "assets:logo": "node scripts/prepare-logo.mjs",
+    "assets:plates": "node scripts/prepare-assets.mjs",
+    "screenshots": "node scripts/screenshots.mjs",
+    "assets:kie:dry-run": "node scripts/assets/kie-dry-run.mjs"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "5.3.0",
-    "@fontsource-variable/space-grotesk": "5.3.0",
     "lucide-react": "1.67.0",
     "next": "16.4.4",
     "react": "19.3.0",
@@ -18,6 +22,9 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@fontsource-variable/host-grotesk": "5.3.0",
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
     "@playwright/test": "1.64.1",
     "@types/node": "^20",
     "@types/react": "^19",

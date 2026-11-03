@@ -61,8 +61,8 @@
 .q {
   font-family: var(--font-display);
   font-size: clamp(18px, 12px + 0.6vw, 26px);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1.2;
   transition: color var(--duration-fast) var(--ease-out);
 }
@@ -108,7 +108,7 @@
   margin-bottom: 4px;
   font-family: var(--font-display);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
   color: var(--color-lime);
@@ -122,7 +122,8 @@
   .art {
     grid-column: 1 / span 5;
     grid-row: 1;
-    aspect-ratio: 8 / 9;
+    aspect-ratio: 4 / 3;
+    align-self: center;
     max-height: none;
     margin-left: calc(-1 * var(--gutter));
     border-radius: 0 var(--radius-card) var(--radius-card) 0;

@@ -1,0 +1,39 @@
+.frame {
+  position: relative;
+  overflow: hidden;
+  container-type: size;
+  pointer-events: none;
+  user-select: none;
+  background: var(--color-bg);
+}
+
+/* object-fit: cover, done by hand so overlay marks share the image's coordinate space. */
+.plate {
+  --plate-w: var(--plate-w-override, max(100cqw, 100cqh * var(--plate-r)));
+  position: absolute;
+  width: var(--plate-w);
+  aspect-ratio: var(--plate-ratio);
+  left: calc((100cqw - var(--plate-w)) * var(--plate-ax));
+  top: calc((100cqh - var(--plate-w) / var(--plate-r)) * var(--plate-ay));
+}
+
+.img {
+  object-fit: cover;
+}
+
+.mark {
+  position: absolute;
+  translate: -50% -50%;
+  display: block;
+}
+
+.mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mark[data-glow] img {
+  filter: drop-shadow(0 0 0.6cqw color-mix(in srgb, var(--color-lime) 55%, transparent))
+    drop-shadow(0 0 2.4cqw color-mix(in srgb, var(--color-lime) 22%, transparent));
+}

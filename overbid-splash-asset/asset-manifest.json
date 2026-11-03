@@ -1,0 +1,21 @@
+{
+  "id": "A02",
+  "src": "/media/splash-threshold.webp",
+  "width": 1672,
+  "height": 941,
+  "bytes": 87186,
+  "smallSrc": "/media/splash-threshold-small.webp",
+  "smallWidth": 960,
+  "smallHeight": 540,
+  "source": "source-png/splash-threshold.png",
+  "decorative": true,
+  "alt": "",
+  "opaque": true,
+  "logoAnchor": [
+    0.5,
+    0.36
+  ],
+  "logoSeparate": true,
+  "generatedWith": "built-in image generation",
+  "note": "Static environment plate; no video,logo,or interface baked in."
+}

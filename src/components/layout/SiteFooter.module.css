@@ -76,7 +76,7 @@
 .services {
   font-family: var(--font-display);
   font-size: var(--eyebrow-size);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
 }

@@ -18,7 +18,7 @@ export function ListingCard({ listing: l, saved, onToggleSave, headingLevel: H =
   const titleId = `listing-${l.id}-title`;
   return (
     <article className={styles.card} aria-labelledby={titleId}>
-      <ListingCover assetId={l.coverAssetId} uid={l.id} className={styles.cover} />
+      <ListingCover assetId={l.coverAssetId} className={styles.cover} />
       <div className={styles.body}>
         <p className={styles.category}>{l.category}</p>
         <H id={titleId} className={styles.title}>

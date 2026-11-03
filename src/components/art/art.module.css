@@ -23,32 +23,3 @@
 .orbital {
   overflow: visible;
 }
-
-.tempTag {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  z-index: 2;
-  padding: 4px 8px;
-  border: 1px dashed var(--color-border);
-  border-radius: 4px;
-  background: var(--color-veil);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--color-muted);
-  white-space: nowrap;
-}
-
-.tempTagHero {
-  bottom: 24%;
-  right: var(--gutter);
-}
-
-.tempTagSm {
-  right: 8px;
-  bottom: 8px;
-  font-size: 10px;
-  padding: 2px 6px;
-}

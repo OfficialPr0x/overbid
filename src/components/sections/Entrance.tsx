@@ -24,7 +24,7 @@ export function Entrance() {
             ))}
           </h1>
           <p className={styles.lead}>{entrance.description}</p>
-          <div className={styles.actions}>
+          <div className={`${styles.actions} cta-row`}>
             <ButtonLink href={entrance.primary.href} arrow data-event="hero_sell_click">
               {entrance.primary.label}
             </ButtonLink>

@@ -85,6 +85,8 @@
 .block {
   display: flex;
   width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 .label {

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { inter, spaceGrotesk } from './fonts';
+import { hostGrotesk, instrumentSerif, inter } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   // Demo build with sample inventory: keep out of search indexes until launch inputs are supplied.
   robots: { index: false, follow: false },
   icons: { icon: '/brand/overbid-mark-640.webp' },
+  openGraph: {
+    type: 'website',
+    siteName: 'OVERBID CAPITAL',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export const viewport: Viewport = {
@@ -23,7 +31,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="en" className={`${hostGrotesk.variable} ${instrumentSerif.variable} ${inter.variable}`}>
       <body>
         <a href="#main" className="skip-link">
           Skip to content

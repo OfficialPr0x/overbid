@@ -57,10 +57,20 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 700;
   letter-spacing: var(--tracking-display);
-  line-height: 1;
   text-wrap: balance;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+  line-height: 0.98;
+}
+
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.05;
 }
 
 p {
@@ -143,6 +153,20 @@ button {
 
 .skip-link:focus-visible {
   transform: none;
+}
+
+/* Headings receive programmatic focus for screen readers only; a ring around display type adds noise. */
+h1[tabindex='-1']:focus,
+h2[tabindex='-1']:focus {
+  outline: none;
+}
+
+/* Stacked CTA pairs read as one column on small phones. */
+@media (max-width: 479px) {
+  .cta-row > a,
+  .cta-row > button {
+    width: 100%;
+  }
 }
 
 body.scroll-locked {

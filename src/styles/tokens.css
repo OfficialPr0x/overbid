@@ -26,8 +26,9 @@
   --art-stone-deep: #040505;
   --art-fog: #dfe3d6;
 
-  --font-display: var(--font-space-grotesk), 'Space Grotesk', Arial, sans-serif;
+  --font-display: var(--font-host-grotesk), 'Host Grotesk', Arial, sans-serif;
   --font-body: var(--font-inter), Inter, Arial, sans-serif;
+  --font-accent: var(--font-instrument-serif), 'Instrument Serif', Georgia, serif;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -57,7 +58,7 @@
   --small-size: clamp(14px, 10px + 0.3vw, 16px);
   --control-size: 16px;
   --eyebrow-size: 11px;
-  --tracking-display: -0.045em;
+  --tracking-display: -0.04em;
   --tracking-eyebrow: 0.2em;
 
   --control-h: 52px;

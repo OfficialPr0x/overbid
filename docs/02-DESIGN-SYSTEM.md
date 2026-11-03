@@ -16,7 +16,7 @@
 Gold is not a primary fill. Do not put lime text on ivory. Check actual rendered contrast, including against images. Functional boundaries use sufficient contrast; decorative hairlines may be quieter. Error and success states never depend on color alone.
 
 ## Type
-Default self-hosted font: Space Grotesk, weights 400/500/600/700; body and UI: Inter 400/500/600. Obtain legitimate font files/license notices. Fallback Arial, sans-serif. Logo remains the supplied wordmark, not these fonts. Headline weight 700; letter-spacing -0.045em; line-height 0.98–1.05. Body 1.5–1.65; UI 1.3.
+Display: self-hosted Host Grotesk (OFL), weights 300–800. Body and UI: Inter 400/500/600. Space Grotesk was the original default and was replaced because its geometric cut stays optically light and reads as a product startup face rather than private-capital authority. Obtain legitimate font files/license notices. Fallback Arial, sans-serif. Logo remains the supplied wordmark, not these fonts. Hero and section headlines weight 800; supporting headings 700; tracked eyebrows 600. Headline letter-spacing -0.04em; line-height 0.98–1.05. Body 1.5–1.65; UI 1.3.
 
 At 1920 wide: hero 112px (max text width 840px), section H2 72px, body 22px, control 18px, eyebrow 13px with 0.2em tracking. At 1440: hero 88px, H2 60px, body 18px. At 390: hero 48px, H2 38px, body 17px, controls 16px, eyebrow 11px. Use fluid values in `design/tokens.css`, then adjust only at named breakpoints. Avoid all-caps paragraphs.
 

@@ -23,6 +23,8 @@
   width: min(100%, 520px);
   aspect-ratio: 1;
   justify-self: center;
+  -webkit-mask-image: radial-gradient(closest-side, #000 72%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 72%, transparent 100%);
 }
 
 .rows {
@@ -48,7 +50,7 @@
 
 .num {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 36px;
   letter-spacing: -0.04em;
   line-height: 1;
