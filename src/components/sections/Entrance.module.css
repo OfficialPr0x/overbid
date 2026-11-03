@@ -132,10 +132,11 @@
     padding-top: clamp(40px, 4.2vw, 84px);
     width: 56%;
   }
-  .art {
+  .hero .art {
     position: absolute;
     inset: 0;
     width: auto;
+    height: auto;
     margin: 0;
     aspect-ratio: auto;
     z-index: var(--z-art);

@@ -1,10 +1,15 @@
 .frame {
-  position: relative;
   overflow: hidden;
   container-type: size;
   pointer-events: none;
   user-select: none;
   background: var(--color-bg);
+}
+
+/* Zero specificity so a section class can take the frame out of flow (the hero does).
+   Equal-specificity `position` loses or wins depending on CSS chunk order. */
+:where(.frame) {
+  position: relative;
 }
 
 /* object-fit: cover, done by hand so overlay marks share the image's coordinate space. */
