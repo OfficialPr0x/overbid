@@ -1,0 +1,142 @@
+[
+  {
+    "id": "A01",
+    "name": "hero-gateway",
+    "ratio": "16:9",
+    "focalPoint": [
+      0.73,
+      0.49
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/hero-gateway.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A02",
+    "name": "intro-threshold",
+    "ratio": "16:9",
+    "focalPoint": [
+      0.5,
+      0.36
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/intro-threshold.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A03",
+    "name": "sculptural-key",
+    "ratio": "1:1",
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/sculptural-key.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A04",
+    "name": "archive-dossiers",
+    "ratio": "4:3",
+    "focalPoint": [
+      0.65,
+      0.5
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/archive-dossiers.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A05",
+    "name": "trust-dossier",
+    "ratio": "4:3",
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/trust-dossier.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A06",
+    "name": "listing-software",
+    "ratio": "16:9",
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/listing-software.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A07",
+    "name": "listing-commerce",
+    "ratio": "16:9",
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/listing-commerce.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A08",
+    "name": "listing-services",
+    "ratio": "16:9",
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/listing-services.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "A09",
+    "name": "mobile-gateway",
+    "ratio": "3:4",
+    "focalPoint": [
+      0.5,
+      0.45
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/mobile-gateway.webp",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  },
+  {
+    "id": "V01",
+    "name": "ambient-threshold",
+    "ratio": "16:9",
+    "focalPoint": [
+      0.5,
+      0.36
+    ],
+    "status": "not-generated",
+    "decorative": true,
+    "output": "/media/ambient-threshold.mp4",
+    "promptSource": "prompts/ASSET-PROMPTS.md",
+    "logoCompositedSeparately": true
+  }
+]

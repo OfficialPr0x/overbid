@@ -1,0 +1,29 @@
+.prose {
+  display: grid;
+  gap: 20px;
+  max-width: 72ch;
+  padding-bottom: var(--section-pad);
+  font-size: var(--small-size);
+  line-height: 1.65;
+}
+
+.prose h2 {
+  margin-top: 16px;
+  font-size: clamp(24px, 16px + 1vw, 36px);
+  letter-spacing: -0.03em;
+}
+
+.prose ul {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.prose a {
+  color: var(--color-lime);
+}
+
+.muted {
+  color: var(--color-muted);
+}

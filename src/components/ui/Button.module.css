@@ -1,0 +1,137 @@
+.button {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: var(--control-h);
+  padding: 0 28px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: var(--control-size);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Decorative clipped shape. The element itself (hit box, focus ring) stays rectangular. */
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.primary {
+  color: var(--color-on-lime);
+}
+
+.primary::before {
+  inset: 0;
+  background: var(--color-lime);
+  clip-path: polygon(var(--clip) 0, 100% 0, 100% calc(100% - var(--clip)), calc(100% - var(--clip)) 100%, 0 100%, 0 var(--clip));
+}
+
+.primary:hover::before {
+  background: var(--color-lime-hover);
+}
+
+.secondary {
+  color: var(--color-text);
+}
+
+.secondary::before {
+  inset: 0;
+  background: var(--color-text);
+  clip-path: polygon(var(--clip) 0, 100% 0, 100% calc(100% - var(--clip)), calc(100% - var(--clip)) 100%, 0 100%, 0 var(--clip));
+}
+
+.secondary::after {
+  inset: 1px;
+  background: var(--color-bg);
+  clip-path: polygon(calc(var(--clip) - 0.6px) 0, 100% 0, 100% calc(100% - var(--clip) + 0.6px), calc(100% - var(--clip) + 0.6px) 100%, 0 100%, 0 calc(var(--clip) - 0.6px));
+}
+
+.secondary:hover::after {
+  background: var(--color-raised);
+}
+
+.text {
+  min-height: 44px;
+  padding: 0 0 4px;
+  color: var(--color-lime);
+  border-bottom: 2px solid currentColor;
+  min-width: 0;
+}
+
+.text:hover {
+  color: var(--color-lime-hover);
+}
+
+.sm {
+  min-height: 44px;
+  padding: 0 18px;
+  font-size: 15px;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.label {
+  min-width: 0;
+}
+
+.arrow {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.button:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.button[data-loading] {
+  cursor: progress;
+}
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2s;
+  }
+  .button:hover .arrow {
+    transform: none;
+  }
+}

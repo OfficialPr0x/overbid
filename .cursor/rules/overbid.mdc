@@ -1,0 +1,5 @@
+---
+description: OVERBID brand, implementation, and verification requirements
+alwaysApply: true
+---
+Read AGENTS.md and START-HERE.md before substantial work. Use docs/01 through docs/10 as the implementation contract and Reference-Guidelines as visual references. Recreate the site in live semantic HTML, never screenshot slices. Keep logo fidelity, exact copy, two conversion paths, responsive composition, reduced motion and truthful demo labels. KIE credentials are server/build-only; model adapters require current documentation preflight. Prove behaviors and compare screenshots before reporting completion. Record progress in docs/BUILD-STATUS.md.

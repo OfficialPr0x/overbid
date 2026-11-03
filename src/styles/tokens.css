@@ -1,0 +1,123 @@
+/* App tokens. Source of truth: design/tokens.css + docs/02-DESIGN-SYSTEM.md. Extend here, never inline hex elsewhere. */
+:root {
+  --color-bg: #080a09;
+  --color-surface: #111512;
+  --color-raised: #191e19;
+  --color-text: #f5f1e6;
+  --color-muted: #b8bcaf;
+  --color-lime: #c3ff36;
+  --color-lime-hover: #d4ff70;
+  --color-gold: #b99b61;
+  --color-border: #363e33;
+  --color-danger: #ff9b93;
+  --color-on-lime: #0b0d0a;
+
+  /* Derived, decorative only */
+  --color-gold-line: rgb(185 155 97 / 0.45);
+  --color-gold-faint: rgb(185 155 97 / 0.22);
+  --color-lime-glow: rgb(195 255 54 / 0.18);
+  --color-lime-soft: rgb(195 255 54 / 0.12);
+  --color-veil: rgb(8 10 9 / 0.88);
+
+  /* Art-only stone ramp for SVG stand-in artwork */
+  --art-stone-hi: #444a43;
+  --art-stone-mid: #1f2420;
+  --art-stone-low: #0e110f;
+  --art-stone-deep: #040505;
+  --art-fog: #dfe3d6;
+
+  --font-display: var(--font-space-grotesk), 'Space Grotesk', Arial, sans-serif;
+  --font-body: var(--font-inter), Inter, Arial, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-28: 112px;
+  --space-40: 160px;
+
+  --container-max: 1760px;
+  --gutter: 20px;
+  --grid-gap: 16px;
+  --section-pad: 64px;
+  --header-h: 72px;
+  --anchor-offset: 88px;
+
+  /* Fluid type tuned to docs/02 anchors: 390 / 1440 / 1920 */
+  --hero-size: clamp(48px, 16px + 5vw, 112px);
+  --h2-size: clamp(38px, 24px + 2.5vw, 72px);
+  --h3-size: clamp(22px, 12px + 1.1vw, 34px);
+  --lead-size: clamp(19px, 6px + 1.25vw, 30px);
+  --body-size: clamp(17px, 6px + 0.834vw, 22px);
+  --small-size: clamp(14px, 10px + 0.3vw, 16px);
+  --control-size: 16px;
+  --eyebrow-size: 11px;
+  --tracking-display: -0.045em;
+  --tracking-eyebrow: 0.2em;
+
+  --control-h: 52px;
+  --field-h: 52px;
+  --radius-card: 12px;
+  --radius-field: 8px;
+  --radius-chip: 999px;
+  --clip: 8px;
+
+  --duration-fast: 160ms;
+  --duration-card: 180ms;
+  --duration-base: 240ms;
+  --duration-reveal: 560ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --z-base: 0;
+  --z-art: 1;
+  --z-content: 2;
+  --z-header: 30;
+  --z-menu: 50;
+  --z-intro: 60;
+  --z-dialog: 80;
+  --z-toast: 90;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --grid-gap: 24px;
+    --section-pad: 80px;
+    --eyebrow-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 48px;
+    --section-pad: 112px;
+    --header-h: 96px;
+    --anchor-offset: 120px;
+    --control-h: 56px;
+    --control-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --gutter: 80px;
+    --grid-gap: 32px;
+    --control-size: 18px;
+    --eyebrow-size: 13px;
+    --control-h: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-card: 0ms;
+    --duration-base: 0ms;
+    --duration-reveal: 0ms;
+  }
+}

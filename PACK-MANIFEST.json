@@ -1,0 +1,192 @@
+[
+  {
+    "path": ".cursor/rules/overbid.mdc",
+    "bytes": 654,
+    "sha256": "818ad49dee2a823442c0bdc4270bf9385c5d1f13df131db03ed65bd2efd818bb"
+  },
+  {
+    "path": ".env.example",
+    "bytes": 253,
+    "sha256": "6d1c9a255c8a65e737893513af20009d234d882162660018e1f0fb00e056e890"
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 3709,
+    "sha256": "dcbcf86afd969687fcd5f85024d016dcbfe43754850485b3f52b81674865e680"
+  },
+  {
+    "path": "INTEGRATION-NOTES.md",
+    "bytes": 1020,
+    "sha256": "bd52b0dd0067772d9b089d0fe674ab3626f73a979539f657268149b3f9fab416"
+  },
+  {
+    "path": "README.md",
+    "bytes": 2973,
+    "sha256": "bfe616ba86ce54249e5a21b62887b29f75f8676eb8039b54a8304d38f01ff7b1"
+  },
+  {
+    "path": "Reference-Guidelines/00-approved-logo.png",
+    "bytes": 1610286,
+    "sha256": "370832f02cdbac2038b18eff88500e589be58e00abd35f55c6848e067eb0f141"
+  },
+  {
+    "path": "Reference-Guidelines/01-entrance.png",
+    "bytes": 1972712,
+    "sha256": "e47c133ec7c7463190074c8343672f65cb9c32822a61008565eda838fbc234d9"
+  },
+  {
+    "path": "Reference-Guidelines/02-advantage.png",
+    "bytes": 1710148,
+    "sha256": "bd60b9e206a43c0cee24cf6b85f356aaea0728fa7d6fa4946eb5897a754eca8a"
+  },
+  {
+    "path": "Reference-Guidelines/03-founders.png",
+    "bytes": 1618797,
+    "sha256": "71b92c07b60f5e0fa59587f40d46e5b22fe3d45b352e0e55f46f0031ce023918"
+  },
+  {
+    "path": "Reference-Guidelines/04-buyers.png",
+    "bytes": 1824720,
+    "sha256": "ffb08338c02365e8d9539de056c6ba61d7e858edbf3ef418765dab09f445d405"
+  },
+  {
+    "path": "Reference-Guidelines/05-marketplace.png",
+    "bytes": 1756248,
+    "sha256": "f7d91e7f7768a565d1146a6a3734a74e4b633347a3829fded4bfc2e32fb0a81c"
+  },
+  {
+    "path": "Reference-Guidelines/06-trust.png",
+    "bytes": 2147174,
+    "sha256": "b8bfb4d278a9ab81678ebd931a46dae4c9a7538cd436af156251cd92a1384c92"
+  },
+  {
+    "path": "Reference-Guidelines/07-introduction.png",
+    "bytes": 1425577,
+    "sha256": "b7556dac1c96ce5f7f5a90a2034d1621a97c5f0fbd84d86b2dc4cc28cfd27dab"
+  },
+  {
+    "path": "Reference-Guidelines/08-splash.png",
+    "bytes": 2100818,
+    "sha256": "72a65d9ac898684ade533449a275453a1e8300cb1d7d0ed12dffbf64c3825eed"
+  },
+  {
+    "path": "Reference-Guidelines/09-original-hero.png",
+    "bytes": 2001673,
+    "sha256": "9816ab72b5cf538c80e048030ebd12abd6f3c0028cfeba6fd71ee24613ab9129"
+  },
+  {
+    "path": "Reference-Guidelines/INDEX.md",
+    "bytes": 709,
+    "sha256": "c9e4f85c0417d996eb6f2cc6f6d1c98a3d20f853fc5c69aca070182bda11c9a9"
+  },
+  {
+    "path": "START-HERE.md",
+    "bytes": 1646,
+    "sha256": "fd55fc0340ce5459ff72dfc0a8e8e1dc4fe752f0ab4e7fec8400ba97d40a92e9"
+  },
+  {
+    "path": "data/sample-listings.json",
+    "bytes": 1842,
+    "sha256": "cf05481733de5a3ae6d5b65d87393c7cff24cdaa9ce0c47a4fdf1035905407b5"
+  },
+  {
+    "path": "design/asset-manifest.json",
+    "bytes": 3112,
+    "sha256": "69f6f3834e0971e01d5f3ca2bc48a541176367ebd547a47d9b8f96cd27971f73"
+  },
+  {
+    "path": "design/copy-inventory.json",
+    "bytes": 1332,
+    "sha256": "ab7cd7ebf016526e01cae4f9ec3ebd7e2b5a76e5c8ec6f9cdd05e80ef5f21f33"
+  },
+  {
+    "path": "design/kie-image-request.example.json",
+    "bytes": 220,
+    "sha256": "9fd83485d5055248eb49c05f509f5b70abafccaa4ab368f2dfe9f4291b9af106"
+  },
+  {
+    "path": "design/tokens.css",
+    "bytes": 1256,
+    "sha256": "2c4e4de07fddc46683ca895ef9762f94ea3fb63e3900a25a3c00c8d89716a564"
+  },
+  {
+    "path": "docs/01-BRAND-AND-VOICE.md",
+    "bytes": 2255,
+    "sha256": "0ae8ea5074fa61eac0bb2d470411230ce444df1e1e238e60c3b10f57ed3e728c"
+  },
+  {
+    "path": "docs/02-DESIGN-SYSTEM.md",
+    "bytes": 3095,
+    "sha256": "578add02689e2dab58013b3d345cea4d048689cabad3496d579c069e981c3fe0"
+  },
+  {
+    "path": "docs/03-SECTIONS.md",
+    "bytes": 7607,
+    "sha256": "9fe3853b749e7b1cd8f3283c4eb99cdf66b6cb34e2a71a18044b1730f75811f4"
+  },
+  {
+    "path": "docs/04-RESPONSIVE-AND-COMPONENTS.md",
+    "bytes": 3039,
+    "sha256": "363b1fc625d3bae6a3bd2863febfa4b89a74e0823476437a087ffe8cbd618c95"
+  },
+  {
+    "path": "docs/05-MOTION.md",
+    "bytes": 2812,
+    "sha256": "ea72065585d66b627222d267d6a5db1c83dd0b2de4825c28e97c1d7663217854"
+  },
+  {
+    "path": "docs/06-ASSETS-AND-KIE.md",
+    "bytes": 4912,
+    "sha256": "b638b1d567df2c2adfb9a376d689d4ccb3a55db12760a0f4dc36cc555d261c06"
+  },
+  {
+    "path": "docs/07-FUNCTIONAL-SCOPE.md",
+    "bytes": 4872,
+    "sha256": "530757deb19e1a4e340923334e6cc82ddb459be27ee4a3a111f2baf703e8a8b8"
+  },
+  {
+    "path": "docs/08-ARCHITECTURE.md",
+    "bytes": 3574,
+    "sha256": "e3ea93c655a73552a8955495f0c1d1bca346b77ed3a975e0d9d49b30a2a85d3e"
+  },
+  {
+    "path": "docs/09-QA-AND-ACCEPTANCE.md",
+    "bytes": 3381,
+    "sha256": "4b7e0f26c613f24ebe50051639c9e09f2e5e5615368ad3fd1fe3d1010113ed9b"
+  },
+  {
+    "path": "docs/10-DELIVERY-PLAN.md",
+    "bytes": 2407,
+    "sha256": "672596387ba405b3196eda475a1a5e937ea19b8aad85c41ec441a4830aafa328"
+  },
+  {
+    "path": "docs/11-LAUNCH-INPUTS.md",
+    "bytes": 1424,
+    "sha256": "eb0469f2c1779377448cf1575e37f7297be50cea3038b4e645355be5411ad499"
+  },
+  {
+    "path": "docs/12-SOURCES-AND-PREFLIGHT.md",
+    "bytes": 1409,
+    "sha256": "acc9e23fe02b3f15c2fcab38aeac4cef249d470d5e14f4b81183e555fd6b43d7"
+  },
+  {
+    "path": "docs/BUILD-STATUS.md",
+    "bytes": 623,
+    "sha256": "f90aeb7ecf15b852a5bcf3e15a361f9fb73bafa212ddd5ddbddc113eda82bdea"
+  },
+  {
+    "path": "prompts/ASSET-PROMPTS.md",
+    "bytes": 4510,
+    "sha256": "4617a85be9b04b114bbeae19557d75644a1f5c7025a44e3a57ebb8bbdc434dbf"
+  },
+  {
+    "path": "prompts/CURSOR-KICKOFF.md",
+    "bytes": 1176,
+    "sha256": "fb6ee64b160a35368fabadf9a4cbea0d3acc964d1b44f0d1255223ad621d42b9"
+  },
+  {
+    "path": "prompts/VISUAL-REVIEW.md",
+    "bytes": 615,
+    "sha256": "c18d5362acc1a9906655aeefe8b1332e0bfabcc3ac65b7e47aed2c124c2950d6"
+  }
+]

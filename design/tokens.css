@@ -1,0 +1,21 @@
+/* Starting tokens; consuming app imports once from its root stylesheet. */
+:root {
+ --color-bg:#080A09; --color-surface:#111512; --color-raised:#191E19;
+ --color-text:#F5F1E6; --color-muted:#B8BCAF; --color-lime:#C3FF36;
+ --color-gold:#B99B61; --color-border:#363E33; --color-danger:#FF9B93;
+ --font-display:'Space Grotesk',Arial,sans-serif; --font-body:Inter,Arial,sans-serif;
+ --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
+ --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px;
+ --space-20:80px; --space-28:112px; --space-40:160px;
+ --container-max:1760px; --gutter:20px; --section-pad:64px;
+ --hero-size:clamp(48px,6.1vw,112px); --h2-size:clamp(38px,4vw,72px);
+ --body-size:clamp(17px,1.25vw,22px);
+ --radius-card:12px; --radius-field:8px;
+ --duration-fast:160ms; --duration-base:240ms; --duration-reveal:560ms;
+ --ease-out:cubic-bezier(.22,1,.36,1);
+ --z-base:0; --z-header:30; --z-menu:50; --z-intro:60; --z-dialog:80; --z-toast:90;
+}
+@media(min-width:768px){:root{--gutter:32px;--section-pad:80px}}
+@media(min-width:1024px){:root{--gutter:48px;--section-pad:112px}}
+@media(min-width:1440px){:root{--gutter:80px}}
+@media(prefers-reduced-motion:reduce){:root{--duration-fast:0ms;--duration-base:0ms;--duration-reveal:0ms}}

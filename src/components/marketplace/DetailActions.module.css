@@ -1,0 +1,57 @@
+.actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-field);
+  background: transparent;
+  font-weight: 600;
+}
+
+.save svg {
+  width: 20px;
+  height: 20px;
+}
+
+.save[aria-pressed='true'] {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+}
+
+.save[aria-pressed='true'] svg {
+  fill: currentColor;
+}
+
+.note,
+.muted {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.sim {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-field);
+  font-weight: 600;
+}
+
+.steps {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+  padding-left: 22px;
+  font-size: 16px;
+}
+
+.dialogActions {
+  margin-top: 20px;
+}

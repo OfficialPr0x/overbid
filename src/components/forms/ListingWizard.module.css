@@ -1,0 +1,161 @@
+.wizard {
+  display: grid;
+  gap: 24px;
+  padding-bottom: var(--section-pad);
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.progress li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 2px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-muted);
+  min-width: 0;
+}
+
+.progress li[aria-current='step'] {
+  border-top-color: var(--color-lime);
+  color: var(--color-text);
+}
+
+.progress li[data-done] {
+  border-top-color: var(--color-gold);
+  color: var(--color-text);
+}
+
+.dot {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.dot svg {
+  width: 16px;
+  height: 16px;
+}
+
+.panel {
+  display: grid;
+  gap: 24px;
+  padding: clamp(20px, 3vw, 40px);
+  border: 1px solid var(--color-gold-line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  max-width: 880px;
+}
+
+.stepTitle {
+  font-size: clamp(24px, 16px + 1vw, 36px);
+  letter-spacing: -0.03em;
+  outline: none;
+}
+
+.stepTitle:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 6px;
+}
+
+.fields {
+  display: grid;
+  gap: 20px;
+}
+
+.row2 {
+  display: grid;
+  gap: 20px;
+}
+
+.callout {
+  padding: 12px 16px;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-field);
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.review {
+  display: grid;
+  gap: 20px;
+}
+
+.reviewBadge {
+  justify-self: start;
+  padding: 6px 14px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-chip);
+  font-weight: 600;
+}
+
+.reviewList {
+  display: grid;
+}
+
+.reviewList > div {
+  display: grid;
+  gap: 4px;
+  padding-block: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.reviewList dt {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.reviewList dd {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.reviewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nav > :only-child {
+  margin-left: auto;
+}
+
+@media (max-width: 520px) {
+  .progress li > span:last-child {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 640px) {
+  .row2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .reviewList > div {
+    grid-template-columns: 200px 1fr;
+  }
+}

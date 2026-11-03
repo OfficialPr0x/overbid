@@ -1,0 +1,70 @@
+.grid {
+  display: grid;
+  gap: 40px var(--grid-gap);
+  grid-template-areas:
+    'head'
+    'form'
+    'art';
+}
+
+.head {
+  grid-area: head;
+}
+
+.card {
+  grid-area: form;
+  padding: clamp(20px, 2.2vw, 36px);
+  border: 1px solid var(--color-gold-line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  min-width: 0;
+}
+
+.artArea {
+  grid-area: art;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
+.art {
+  width: min(100%, 560px);
+  aspect-ratio: 720 / 460;
+}
+
+.rabbitLine {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: min(100%, 560px);
+  font-family: var(--font-display);
+  font-size: var(--eyebrow-size);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-lime);
+  white-space: nowrap;
+}
+
+.rabbitLine::before,
+.rabbitLine::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-gold-line);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-areas:
+      'head head head head head head form form form form form form'
+      'art art art art art art form form form form form form';
+    grid-template-rows: auto 1fr;
+    row-gap: 32px;
+    align-items: start;
+  }
+  .artArea {
+    align-self: center;
+  }
+}

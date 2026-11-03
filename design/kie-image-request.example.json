@@ -1,0 +1,9 @@
+{
+  "model": "gpt-image-2-5-sunburst-text-to-image",
+  "input": {
+    "prompt": "Replace with approved environment-only asset prompt.",
+    "aspect_ratio": "4:3",
+    "resolution": "1K",
+    "background": "opaque"
+  }
+}

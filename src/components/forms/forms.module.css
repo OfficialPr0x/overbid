@@ -1,0 +1,269 @@
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label,
+.label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.optional {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: var(--field-h);
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-field);
+  background: var(--color-bg);
+  font-size: var(--control-size);
+  line-height: 1.4;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.field select {
+  padding-right: 44px;
+  appearance: none;
+  background: var(--color-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%23F5F1E6' stroke-width='1.75' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;
+}
+
+.field textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 0.8;
+}
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: var(--color-muted);
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  border-color: var(--color-lime);
+  outline-offset: 2px;
+}
+
+.field [aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-danger);
+}
+
+.error svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 1px;
+}
+
+.errorSummary {
+  padding: 16px 18px;
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-field);
+  background: var(--color-bg);
+}
+
+.errorSummaryTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--color-danger);
+}
+
+.errorSummaryTitle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.errorSummary ul {
+  margin: 8px 0 0;
+  padding-left: 28px;
+  font-size: 14px;
+}
+
+.errorSummary a {
+  color: var(--color-text);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.segment {
+  position: relative;
+  display: block;
+}
+
+.segment input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.segment span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-h);
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-field);
+  background: var(--color-bg);
+  font-weight: 600;
+  font-size: var(--control-size);
+  text-align: center;
+  transition: background-color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+}
+
+.segment:hover span {
+  border-color: var(--color-muted);
+}
+
+.segment input:checked + span {
+  border-color: var(--color-lime);
+  background: var(--color-lime);
+  color: var(--color-on-lime);
+}
+
+.segment input:focus-visible + span {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 4px;
+}
+
+.formNote {
+  font-size: 14px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.formNote a {
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.live:empty {
+  display: none;
+}
+
+.demoResult,
+.errorResult {
+  display: flex;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-field);
+  background: var(--color-bg);
+  font-size: 14px;
+  outline-offset: 2px;
+}
+
+.errorResult {
+  border-color: var(--color-danger);
+}
+
+.demoResult svg,
+.errorResult svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--color-gold);
+}
+
+.errorResult svg {
+  color: var(--color-danger);
+}
+
+.demoTitle {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* radio cards (wizard) */
+.choiceGroup {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.choiceGroup legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.choice {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-field);
+  background: var(--color-bg);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.choice:has(input:checked) {
+  border-color: var(--color-lime);
+}
+
+.choice input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--color-lime);
+}
+
+.choice small {
+  display: block;
+  margin-top: 2px;
+  color: var(--color-muted);
+  font-size: 13px;
+}

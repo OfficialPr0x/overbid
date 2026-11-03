@@ -1,0 +1,13 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  padding-block: var(--section-pad);
+}
+
+.chapter {
+  margin-bottom: clamp(28px, 3vw, 56px);
+}
+
+.muted {
+  color: var(--color-muted);
+}

@@ -1,0 +1,58 @@
+{
+  "brand": "OVERBID CAPITAL",
+  "hero": {
+    "headline": [
+      "You built the empire.",
+      "Own your next move."
+    ],
+    "description": "A private marketplace for business owners and ambitious buyers.",
+    "primary": "List Your Business \u2197",
+    "secondary": "Explore Businesses"
+  },
+  "advantage": {
+    "headline": "An unfair level of preparation.",
+    "description": "Better positioning. Relevant buyers. A clearer path to a deal."
+  },
+  "founders": {
+    "headline": [
+      "You built it.",
+      "Make your next move count."
+    ],
+    "primary": "Start Your Listing \u2197"
+  },
+  "buyers": {
+    "headline": [
+      "Find the business",
+      "worth your next move."
+    ],
+    "primary": "Explore Opportunities \u2197"
+  },
+  "marketplace": {
+    "headline": [
+      "Your next chapter.",
+      "Now on the market."
+    ],
+    "sampleNotice": "Illustrative listings \u2014 sample data"
+  },
+  "trust": {
+    "headline": [
+      "Discretion outside.",
+      "Clarity inside."
+    ]
+  },
+  "introduction": {
+    "headline": [
+      "The next move",
+      "is yours."
+    ],
+    "primary": "Request a Private Introduction \u2197"
+  },
+  "splash": {
+    "headline": [
+      "Follow the white rabbit.",
+      "Own what comes next."
+    ],
+    "primary": "Enter OVERBID \u2197",
+    "skip": "Skip intro"
+  }
+}
