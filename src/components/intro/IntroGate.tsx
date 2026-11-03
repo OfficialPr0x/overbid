@@ -12,6 +12,15 @@ type IntroState = 'bypassed' | 'showing-poster' | 'entering' | 'dismissed';
 
 const ENTER_MS = 900;
 
+/** Last word of the command line carries the lime; punctuation stays ivory. */
+function commandParts(line: string) {
+  const cut = line.lastIndexOf(' ');
+  const tail = cut < 0 ? line : line.slice(cut + 1);
+  const lead = cut < 0 ? '' : line.slice(0, cut + 1);
+  const punct = /[.!?]$/.exec(tail)?.[0] ?? '';
+  return { lead, word: punct ? tail.slice(0, -1) : tail, punct };
+}
+
 /* Lit aperture of the A02 plate, measured from the source pixels (fractions of the uncropped image). */
 const APEX = [50, 14.13] as const;
 const BASE_Y = 56.05;
@@ -123,6 +132,8 @@ export function IntroGate() {
   if (state === 'bypassed' || state === 'dismissed') return null;
 
   const trace = `${APEX[0]},${APEX[1]} ${BASE_L},${BASE_Y} ${BASE_R},${BASE_Y}`;
+  const [invite, command] = splash.headline;
+  const own = commandParts(command);
 
   return (
     <dialog
@@ -180,15 +191,21 @@ export function IntroGate() {
       </div>
 
       <div className={styles.content}>
-        <p className={styles.kicker}>{splash.kicker}</p>
+        <p className={styles.kicker}>
+          <span className={styles.kickerPip} aria-hidden="true" />
+          <span className={styles.kickerText}>{splash.kicker}</span>
+        </p>
         <h2 id="intro-title" className={styles.title}>
-          {splash.headline.map((l, i) => (
-            <span key={l} className={styles.lineMask}>
-              <span className={styles.line} style={{ '--i': i } as CSSProperties}>
-                {l}
-              </span>{' '}
+          <span className={styles.invite}>{invite}</span>
+          <span className={styles.lineMask}>
+            <span className={styles.command}>
+              <span className={styles.lead}>{own.lead}</span>
+              <span className={styles.prize}>
+                {own.word}
+                {own.punct ? <span className={styles.punct}>{own.punct}</span> : null}
+              </span>
             </span>
-          ))}
+          </span>
         </h2>
         <p id="intro-desc" className={styles.desc}>
           {splash.description}

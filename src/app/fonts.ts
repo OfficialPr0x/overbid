@@ -15,7 +15,6 @@ export const instrumentSerif = localFont({
   style: 'italic',
   variable: '--font-instrument-serif',
   display: 'swap',
-  preload: false,
 });
 
 export const inter = localFont({

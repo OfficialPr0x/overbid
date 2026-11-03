@@ -289,44 +289,94 @@
   transition: opacity 220ms var(--ease-out);
 }
 
+/* Lockup: quiet metal kicker, italic invitation, black command. Lime is reserved for the prize word. */
 .kicker {
-  font-family: var(--font-display);
-  font-size: var(--eyebrow-size);
-  font-weight: 600;
-  letter-spacing: 0.42em;
-  margin-right: -0.42em;
-  color: var(--color-lime);
-  animation: kickerIn 1400ms var(--ease-out) 1250ms both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: rgb(245 241 230 / 0.78);
+  animation: fadeIn 900ms var(--ease-out) 1100ms both;
 }
 
-@keyframes kickerIn {
-  from {
-    opacity: 0;
-    letter-spacing: 0.9em;
-    margin-right: -0.9em;
-  }
+.kickerPip {
+  width: 5px;
+  height: 5px;
+  background: var(--color-lime);
+  box-shadow: 0 0 10px rgb(195 255 54 / 0.65);
+}
+
+.kickerText {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.46em;
+  margin-right: -0.46em;
+  line-height: 1;
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+  max-width: 100%;
   font-family: var(--font-display);
-  font-size: clamp(32px, min(10px + 3.4vw, 6.6vh), 78px);
+  font-size: clamp(46px, min(11vh, 7.6vw), 112px);
   font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: var(--tracking-display);
-  text-wrap: balance;
+  font-synthesis: none;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  text-wrap: wrap;
+}
+
+/* Cultural line: high-contrast italic, letterpress on the stone. */
+.invite {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.58em;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  white-space: nowrap;
+  text-shadow:
+    0 1px 0 rgb(255 248 230 / 0.18),
+    0 14px 28px rgb(0 0 0 / 0.55);
+  animation: fadeUp 880ms var(--ease-out) 1180ms both;
 }
 
 .lineMask {
   display: block;
+  max-width: 100%;
+  box-sizing: content-box;
   overflow: hidden;
-  padding-bottom: 0.14em;
-  margin-bottom: -0.14em;
+  padding: 0.14em 0.4em 0.36em;
+  margin: -0.1em -0.4em -0.22em;
 }
 
-.line {
-  display: inline-block;
-  animation: lineIn 900ms var(--ease-out) both;
-  animation-delay: calc(1400ms + var(--i) * 120ms);
+/* Ownership line: heaviest cut, tighter than the global display tracking. */
+.command {
+  display: block;
+  font-weight: 800;
+  font-variation-settings: 'wght' 800;
+  letter-spacing: -0.058em;
+  line-height: 0.9;
+  white-space: nowrap;
+  text-shadow: 0 18px 34px rgb(0 0 0 / 0.55);
+  animation: lineIn 860ms cubic-bezier(0.16, 1, 0.3, 1) 1360ms both;
+}
+
+.prize {
+  color: var(--color-lime);
+  text-shadow:
+    0 18px 34px rgb(0 0 0 / 0.5),
+    0 0 16px rgb(195 255 54 / 0.22);
+}
+
+.punct {
+  color: var(--color-text);
+  text-shadow: 0 18px 34px rgb(0 0 0 / 0.55);
 }
 
 @keyframes lineIn {
@@ -336,9 +386,23 @@
 }
 
 .desc {
-  font-size: var(--body-size);
-  color: var(--color-text-soft, var(--color-text));
-  animation: fadeUp 800ms var(--ease-out) 1700ms both;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: clamp(15px, 1.05vw, 18px);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: rgb(245 241 230 / 0.88);
+  animation: fadeUp 800ms var(--ease-out) 1680ms both;
+}
+
+.desc::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
 }
 
 .enter {
@@ -353,10 +417,11 @@
   background: var(--color-lime);
   color: var(--color-on-lime);
   font-size: var(--control-size);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   overflow: hidden;
   clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
-  animation: fadeIn 700ms var(--ease-out) 1250ms both;
+  animation: fadeIn 700ms var(--ease-out) 1760ms both;
   transition: background var(--duration-fast) var(--ease-out);
 }
 
@@ -403,9 +468,9 @@
   font-family: var(--font-display);
   font-size: var(--eyebrow-size);
   font-weight: 600;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: rgb(245 241 230 / 0.52);
   transition: opacity 200ms var(--ease-out);
 }
 
@@ -520,11 +585,11 @@
   .stage .plate {
     --plate-w-override: max(100cqw, 100cqh * 1.92);
   }
-  .title {
-    font-size: clamp(30px, min(10px + 3.2vw, 5.6vh), 72px);
-  }
   .content {
     gap: 10px;
+  }
+  .title {
+    font-size: clamp(40px, min(9.2vh, 6.4vw), 96px);
   }
   .bottom {
     padding-top: 20px;
@@ -577,10 +642,46 @@
   }
 }
 
+@media (max-width: 759px) {
+  .content {
+    container-type: inline-size;
+  }
+
+  .title {
+    width: 100%;
+    font-size: min(56px, 13.2cqi);
+  }
+
+  .invite {
+    white-space: normal;
+    font-size: 0.7em;
+  }
+
+  .lineMask,
+  .command {
+    width: 100%;
+  }
+
+  .command {
+    white-space: normal;
+  }
+
+  /* "Own what comes" stays one line; "next." drops under it as the stake. */
+  .lead {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 479px) {
   .enter {
     width: 100%;
     justify-content: center;
+  }
+
+  .kickerText {
+    letter-spacing: 0.32em;
+    margin-right: -0.32em;
   }
 }
 
